@@ -21,6 +21,25 @@
             #endregion
 
 
+            #region Theoretical Questions2
+
+
+            // a) Which class is the parent class?
+            // Answer: Shipment 
+
+            // b) Which class is the child class?
+            // Answer: ExpressShipment 
+
+            // c) What members are inherited by ExpressShipment?
+            // Answer: ExpressShipment inherits the TrackingCode property from Shipment.
+
+            // d) Why is inheritance better than duplicating the same code in multiple classes?
+            // Answer: Inheritance avoids code duplication, improves code reuse,
+            // and makes the program easier to maintain and modify.
+
+            #endregion
+
+
         }
     }
 }
