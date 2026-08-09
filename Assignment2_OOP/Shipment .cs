@@ -49,7 +49,7 @@ namespace Assignment2_OOP
             }
         }
 
-        public decimal EstimatedCost
+        public virtual decimal EstimatedCost
         {
             get
             {
