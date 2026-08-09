@@ -1,9 +1,9 @@
 ﻿using Assignment2_OOP;
 using System;
 
-namespace Assignment1_OOP
+namespace Assignment2_OOP
 {
-    internal struct DeliveryCenter
+    internal class DeliveryCenter
     {
         private Shipment[] shipments;
 

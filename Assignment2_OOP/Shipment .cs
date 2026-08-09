@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Assignment1_OOP
+namespace Assignment2_OOP
 {
-    internal struct Shipment
+    public class Shipment
     {
         private string trackingCode;
         private string description;

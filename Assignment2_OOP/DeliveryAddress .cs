@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Assignment1_OOP
+namespace Assignment2_OOP
 {
-    internal struct DeliveryAddress
+    public struct DeliveryAddress
     {
         public string City;
         public string Street;
