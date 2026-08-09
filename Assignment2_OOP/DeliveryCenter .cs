@@ -1,5 +1,4 @@
-﻿using Assignment2_OOP;
-using System;
+﻿using System;
 
 namespace Assignment2_OOP
 {
@@ -7,11 +6,15 @@ namespace Assignment2_OOP
     {
         private Shipment[] shipments;
 
-        public DeliveryCenter()
+        public string CenterName { get; set; }
+
+        public DeliveryCenter(string centerName)
         {
-            shipments = new Shipment[10];
+            CenterName = centerName;
+            shipments = new Shipment[20];
         }
 
+        // Integer Indexer
         public Shipment this[int index]
         {
             get
@@ -29,6 +32,7 @@ namespace Assignment2_OOP
             }
         }
 
+        // String Indexer
         public Shipment this[string trackingCode]
         {
             get
@@ -43,11 +47,12 @@ namespace Assignment2_OOP
             }
         }
 
+        // Add Shipment
         public bool AddShipment(Shipment shipment)
         {
             for (int i = 0; i < shipments.Length; i++)
             {
-                if (shipments[i].TrackingCode == null)
+                if (string.IsNullOrWhiteSpace(shipments[i].TrackingCode))
                 {
                     shipments[i] = shipment;
                     return true;
@@ -55,6 +60,33 @@ namespace Assignment2_OOP
             }
 
             return false;
+        }
+
+        // Remove Shipment
+        public bool RemoveShipment(string trackingCode)
+        {
+            for (int i = 0; i < shipments.Length; i++)
+            {
+                if (shipments[i].TrackingCode == trackingCode)
+                {
+                    shipments[i] = default;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        // Print All Shipments
+        public void PrintAllShipments()
+        {
+            for (int i = 0; i < shipments.Length; i++)
+            {
+                if (!string.IsNullOrWhiteSpace(shipments[i].TrackingCode))
+                {
+                    shipments[i].PrintShipment();
+                }
+            }
         }
     }
 }
